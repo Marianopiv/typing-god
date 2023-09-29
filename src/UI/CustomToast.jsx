@@ -7,9 +7,9 @@ export const Toast = Swal.mixin({
     background:"#008f39",
     color:"white",
     customClass: {
-      popup: "colored-toast swal2-icon-success",
+      popup: "colored-toast swal2-icon-success custom-toast",
     },
     showConfirmButton: false,
-    timer: 2000,
+    timer: 3000,
     timerProgressBar: true,
   });

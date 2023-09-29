@@ -132,7 +132,7 @@ const Home = () => {
           Typing God
         </h1>
         <div className="flex md:gap-4 flex-wrap justify-center font-bold md:text-2xl">
-          <p>ScoreMODILOVE actual: {score.length > 0 && getFullScore(score)}</p>
+          <p>Score actual: {score.length > 0 && getFullScore(score)}</p>
           <p>Tiempo restante por frase:{time}</p>
         </div>
         <div className="flex gap-2 flex-wrap relative p-3 items-center">

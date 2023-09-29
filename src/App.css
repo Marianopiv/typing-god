@@ -50,3 +50,7 @@
 body {
   font-family: 'GodOfWar', sans-serif;
 }
+
+.custom-toast {
+  font-family: sans-serif; /* Reemplaza 'GodOfWar' con el nombre real de tu fuente */
+}
