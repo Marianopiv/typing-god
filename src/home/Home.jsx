@@ -30,8 +30,13 @@ const Home = () => {
   };
 
   const handleKeyPress = (event) => {
-    if (event.code === "Space" || event.key === " " || event.keyCode === 32 || event.key === "Enter"||event.key === "Space") {
-      
+    if (
+      event.code === "Space" ||
+      event.key === " " ||
+      event.keyCode === 32 ||
+      event.key === "Enter" ||
+      event.key === "Space"
+    ) {
       if (counter < 1) {
         setDone([...done, { hit, correct: phrase[0].phrase === hit.trim() }]);
         setPhrase(filterWordIndex(phrase, counter));
@@ -67,7 +72,7 @@ const Home = () => {
       changePhraseReset();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [score,time]);
+  }, [score, time]);
 
   useEffect(() => {
     if (score.length < 5) {
@@ -108,10 +113,7 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    // Obtén el elemento del input por su ID o cualquier otro selector
-    const inputElement = document.getElementById("tuInputId"); // Reemplaza 'tuInputId' con el ID real de tu input
-  
-    // Desactiva la autocapitalización
+    const inputElement = document.getElementById("tuInputId");
     if (inputElement) {
       inputElement.setAttribute("autocapitalize", "none");
     }
@@ -136,7 +138,7 @@ const Home = () => {
           <p>Tiempo restante por frase:{time}</p>
         </div>
         <div className="flex gap-2 flex-wrap relative p-3 items-center">
-        <div className="absolute -z-10 opacity-80 bg-white w-full rounded-md h-full"></div>
+          <div className="hidden md:flex absolute -z-10 opacity-80 bg-white w-full rounded-md h-full"></div>
           {done.map((word, index) => {
             return (
               <span
@@ -152,15 +154,17 @@ const Home = () => {
             );
           })}
           {phrase.map((word, index) => (
-            <p className={`md:text-4xl font-serif `} key={index}>
+            <p className={`hidden md:flex md:text-4xl font-serif `} key={index}>
               {word.phrase}
             </p>
           ))}
         </div>
+
+        <p className="text-center flex md:hidden">Juego disponible unicamente en tamaños desktop en adelante para jugar con teclado</p>
         <input
           id="tuInputId"
           placeholder="Escribi aqui las frases que ves en pantalla"
-          className="border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center font-serif"
+          className="hidden md:flex border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center font-serif"
           onKeyDown={handleKeyPress}
           value={hit}
           onChange={compare}
