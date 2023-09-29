@@ -142,14 +142,14 @@ const Home = () => {
             );
           })}
           {phrase.map((word, index) => (
-            <p className={`md:text-4xl `} key={index}>
+            <p className={`md:text-4xl font-serif `} key={index}>
               {word.phrase}
             </p>
           ))}
         </div>
         <input
           placeholder="Escribi aqui las frases que ves en pantalla"
-          className="border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center"
+          className="border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center font-serif"
           onKeyDown={handleKeyPress}
           value={hit}
           onChange={compare}
