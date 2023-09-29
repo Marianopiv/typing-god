@@ -106,6 +106,15 @@ const Home = () => {
     return () => unsubscribe();
   }, []);
 
+  useEffect(() => {
+    // Obtén el elemento del input por su ID o cualquier otro selector
+    const inputElement = document.getElementById("tuInputId"); // Reemplaza 'tuInputId' con el ID real de tu input
+  
+    // Desactiva la autocapitalización
+    if (inputElement) {
+      inputElement.setAttribute("autocapitalize", "none");
+    }
+  }, []);
   return (
     <>
       {" "}
@@ -122,7 +131,7 @@ const Home = () => {
           Typing God
         </h1>
         <div className="flex md:gap-4 flex-wrap justify-center font-bold md:text-2xl">
-          <p>ScoreMODIFI actual: {score.length > 0 && getFullScore(score)}</p>
+          <p>ScoreMODILOVE actual: {score.length > 0 && getFullScore(score)}</p>
           <p>Tiempo restante por frase:{time}</p>
         </div>
         <div className="flex gap-2 flex-wrap relative p-3 items-center">
@@ -148,12 +157,13 @@ const Home = () => {
           ))}
         </div>
         <input
+          id="tuInputId"
           placeholder="Escribi aqui las frases que ves en pantalla"
           className="border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center font-serif"
           onKeyDown={handleKeyPress}
           value={hit}
           onChange={compare}
-          type="tel"
+          type="text"
           autoCapitalize="none"
         />
       </div>
