@@ -4,7 +4,7 @@ import { sortScores } from "../../helper";
 
 const HighScores = ({ highScores }) => {
   return (
-    <div className=" md:w-1/2 rounded-md md:h-80 relative flex flex-col items-center p-4 md:flex-wrap ">
+    <div className=" lg:w-1/2 rounded-md md:h-80 relative flex flex-col items-center p-4 md:flex-wrap ">
       <h1
         className="text-center mx-auto pt-4 w-full text-xl md:text-5xl"
         style={{ fontWeight: "bold", fontFamily: "GodOfWar" }}
@@ -16,11 +16,11 @@ const HighScores = ({ highScores }) => {
         {highScores.length > 0 &&
           sortScores(highScores).slice(0,12).map(({ name, score }, index) => (
             <div
-              className="flex gap-2 w-1/3 items-center text-xl p-2 text-black"
+              className="flex md:gap-2 w-1/3 items-center md:text-xl md:p-2 text-black"
               key={index}
             >
               <p
-                className="md:text-3xl"
+                className="text-md md:text-3xl"
                 style={{ fontWeight: "bold", fontFamily: "GodOfWar" }}
               >
                 {name}

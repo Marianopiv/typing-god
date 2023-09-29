@@ -126,9 +126,9 @@ const Home = () => {
         src={typingGod}
         alt=""
       />
-      <div className="flex flex-col gap-4 items-center justify-center">
+      <div className="flex flex-col md:gap-4 items-center justify-center">
         <h1
-          className="md:text-9xl text-red-900"
+          className="md:text-7xl lg:text-9xl text-red-900"
           style={{ fontFamily: "GodOfWar" }}
         >
           Typing God
@@ -160,7 +160,11 @@ const Home = () => {
           ))}
         </div>
 
-        <p className="text-center flex md:hidden">Juego disponible unicamente en tamaños desktop en adelante para jugar con teclado</p>
+        <div className="text-center relative flex md:hidden">
+        <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full"></div>
+          Juego disponible unicamente en tamaños desktop en adelante para jugar
+          con teclado
+        </div>
         <input
           id="tuInputId"
           placeholder="Escribi aqui las frases que ves en pantalla"
