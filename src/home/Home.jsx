@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   const handleKeyPress = (event) => {
-    if (event.code === "Space" || event.key === " " || event.keyCode === 32 || event.key === "Enter") {
+    if (event.code === "Space" || event.key === " " || event.keyCode === 32 || event.key === "Enter"||event.key === "Space") {
       if (counter < 1) {
         setDone([...done, { hit, correct: phrase[0].phrase === hit }]);
         setPhrase(filterWordIndex(phrase, counter));
