@@ -110,18 +110,18 @@ const Home = () => {
     <>
       {" "}
       <img
-        className="absolute w-screen h-screen -z-50 top-0"
+        className="absolute w-screen h-screen object-cover md:w-full md:h-full -z-50 top-0 "
         src={typingGod}
         alt=""
       />
       <div className="flex flex-col gap-4 items-center justify-center">
         <h1
-          className="text-9xl text-red-900"
+          className="md:text-9xl text-red-900"
           style={{ fontFamily: "GodOfWar" }}
         >
           Typing God
         </h1>
-        <div className="flex gap-4 font-bold text-2xl">
+        <div className="flex gap-4 font-bold md:text-2xl">
           <p>Score actual: {score.length > 0 && getFullScore(score)}</p>
           <p>Tiempo restante por frase:{time}</p>
         </div>
@@ -132,8 +132,8 @@ const Home = () => {
               <span
                 className={`${
                   word.correct
-                    ? "text-green-500 text-4xl rounded-sm"
-                    : "line-through text-4xl rounded-sm"
+                    ? "text-green-500 md:text-4xl rounded-sm"
+                    : "line-through md:text-4xl rounded-sm"
                 }`}
                 key={index}
               >
@@ -142,17 +142,14 @@ const Home = () => {
             );
           })}
           {phrase.map((word, index) => (
-            <p className={`text-4xl `} key={index}>
+            <p className={`md:text-4xl `} key={index}>
               {word.phrase}
             </p>
           ))}
         </div>
-        <div className="">
-          <span className="font-bold"></span>
-        </div>
         <input
           placeholder="Escribi aqui las frases que ves en pantalla"
-          className="border border-black text-3xl rounded-sm w-4/6 text-center"
+          className="border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center"
           onKeyDown={handleKeyPress}
           value={hit}
           onChange={compare}

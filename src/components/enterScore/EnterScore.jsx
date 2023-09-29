@@ -25,13 +25,13 @@ const EnterScore = ({
     setScore([]), setModal(false);
   };
 
-  const handleSaveScore = (userScore) => {
+  const handleSaveScore = (userScore,highScores) => {
     setToogleButton(true);
-    saveScore(userScore);
+    saveScore(userScore,highScores);
   };
 
   return (
-    <div className="absolute bg-white rounded-md p-8 w-1/2 flex items-center flex-col justify-center h-96 top-16  shadow-2xl border-black border-2">
+    <div className="absolute bg-white rounded-md p-8 md:w-1/2 flex items-center flex-col justify-center md:h-96 top-8 md:top-16  shadow-2xl border-black border-2">
       <h1 className="text-2xl" style={{ fontFamily: "GodOfWar" }}>
         Anota tu puntuacion para ver si llegaste al salón de la fama.
       </h1>
@@ -58,7 +58,7 @@ const EnterScore = ({
           disabled={toogleButton||currentUserData.name===""}
           className="bg-blue-950 text-white"
           onClick={() =>
-            handleSaveScore({ ...currentUserData, score: getFullScore(score) })
+            handleSaveScore({ ...currentUserData, score: getFullScore(score) },highScores)
           }
         >
           Save Score
