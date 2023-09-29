@@ -153,7 +153,8 @@ const Home = () => {
           onKeyDown={handleKeyPress}
           value={hit}
           onChange={compare}
-          type="text"
+          type="tel"
+          autoCapitalize="none"
         />
       </div>
       {modal && (
