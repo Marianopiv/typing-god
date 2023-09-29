@@ -30,7 +30,7 @@ const Home = () => {
   };
 
   const handleKeyPress = (event) => {
-    if (event.code === "Space") {
+    if (event.code === "Space"|| event.key === " " || event.keyCode === 32) {
       if (counter < 1) {
         setDone([...done, { hit, correct: phrase[0].phrase === hit }]);
         setPhrase(filterWordIndex(phrase, counter));
@@ -121,7 +121,7 @@ const Home = () => {
         >
           Typing God
         </h1>
-        <div className="flex gap-4 font-bold md:text-2xl">
+        <div className="flex md:gap-4 flex-wrap justify-center font-bold md:text-2xl">
           <p>Score actual: {score.length > 0 && getFullScore(score)}</p>
           <p>Tiempo restante por frase:{time}</p>
         </div>
