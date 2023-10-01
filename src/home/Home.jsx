@@ -133,7 +133,7 @@ const Home = () => {
         >
           Typing God
         </h1>
-        <div className="flex md:gap-4 flex-wrap justify-center font-bold md:text-2xl">
+        <div className="flex md:gap-4 flex-wrap justify-center font-bold md:text-2xl dark:text-black">
           <p>Score actual: {score.length > 0 && getFullScore(score)}</p>
           <p>Tiempo restante por frase:{time}</p>
         </div>
@@ -154,14 +154,14 @@ const Home = () => {
             );
           })}
           {phrase.map((word, index) => (
-            <p className={`hidden md:flex md:text-4xl font-serif `} key={index}>
+            <p className={`hidden md:flex md:text-4xl font-serif dark:text-black `} key={index}>
               {word.phrase}
             </p>
           ))}
         </div>
 
         <div className="text-center relative flex md:hidden">
-        <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full"></div>
+        <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full dark:text-black"></div>
           Juego disponible unicamente en tamaños desktop en adelante para jugar
           con teclado
         </div>
