@@ -160,8 +160,8 @@ const Home = () => {
           ))}
         </div>
 
-        <div className="text-center relative flex md:hidden">
-        <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full dark:text-black"></div>
+        <div className="text-center relative flex md:hidden dark:text-black">
+        <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full "></div>
           Juego disponible unicamente en tamaños desktop en adelante para jugar
           con teclado
         </div>

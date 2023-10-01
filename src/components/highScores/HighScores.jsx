@@ -6,7 +6,7 @@ const HighScores = ({ highScores }) => {
   return (
     <div className=" lg:w-1/2 rounded-md md:h-80 relative flex flex-col items-center p-4 md:flex-wrap ">
       <h1
-        className="text-center mx-auto pt-4 w-full text-xl md:text-5xl"
+        className="text-center mx-auto pt-4 w-full text-xl md:text-5xl dark:text-black"
         style={{ fontWeight: "bold", fontFamily: "GodOfWar" }}
       >
         Salon de la fama
