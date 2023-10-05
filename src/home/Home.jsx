@@ -153,15 +153,21 @@ const Home = () => {
             );
           })}
           {phrase.map((word, index) => (
-            <p className={`flex md:text-4xl font-serif dark:text-black `} key={index}>
+            <p className={`hidden md:flex md:text-4xl font-serif dark:text-black `} key={index}>
               {word.phrase}
             </p>
           ))}
         </div>
+
+        <div className="text-center relative flex md:hidden dark:text-black">
+        <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full "></div>
+          Juego disponible unicamente en tamaños desktop en adelante para jugar
+          con teclado
+        </div>
         <input
           id="tuInputId"
           placeholder="Escribi aqui las frases que ves en pantalla"
-          className="flex border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center font-serif"
+          className="hidden md:flex border my-8 border-black md:text-3xl rounded-sm w-4/6 text-center font-serif"
           onKeyDown={handleKeyPress}
           value={hit}
           onChange={compare}
