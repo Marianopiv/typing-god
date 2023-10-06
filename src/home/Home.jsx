@@ -12,6 +12,7 @@ import HighScores from "../components/highScores/HighScores";
 import typingGod from "../assets/typingGod.jpg";
 import { collection, onSnapshot } from "firebase/firestore";
 import { db } from "../firebase/firebase";
+import 'animate.css';
 
 const Home = () => {
   const [phrase, setPhrase] = useState(
@@ -118,11 +119,11 @@ const Home = () => {
     <>
       {" "}
       <img
-        className="absolute w-screen h-screen object-cover md:w-full md:h-full -z-50 top-0  "
+        className="absolute w-screen h-screen object-cover md:w-full md:h-full -z-50 top-0 animate__animated animate__fadeIn "
         src={typingGod}
         alt=""
       />
-      <div className="flex flex-col md:gap-4 items-center justify-center">
+      <div className="flex flex-col md:gap-4 items-center justify-center animate__animated animate__fadeIn">
         <h1
           className="md:text-7xl lg:text-9xl text-red-900"
           style={{ fontFamily: "GodOfWar" }}
