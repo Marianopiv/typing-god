@@ -30,12 +30,8 @@ const Home = () => {
   };
 
   const handleKeyPress = (event) => {
-    console.log(event)
-    if (
-      event.key === " " ||
-      event.keyCode === 32 ||
-      event.key === "Space"
-    ) {
+    console.log(event);
+    if (event.key === " " || event.keyCode === 32 || event.key === "Space") {
       if (counter < 1) {
         setDone([...done, { hit, correct: phrase[0].phrase === hit.trim() }]);
         setPhrase(filterWordIndex(phrase, counter));
@@ -117,11 +113,12 @@ const Home = () => {
       inputElement.setAttribute("autocapitalize", "none");
     }
   }, []);
+
   return (
     <>
       {" "}
       <img
-        className="absolute w-screen h-screen object-cover md:w-full md:h-full -z-50 top-0 "
+        className="absolute w-screen h-screen object-cover md:w-full md:h-full -z-50 top-0  "
         src={typingGod}
         alt=""
       />
@@ -133,7 +130,7 @@ const Home = () => {
           Typing God
         </h1>
         <div className="flex md:gap-4 flex-wrap justify-center font-bold md:text-2xl dark:text-black">
-          <p>Score actual: {score.length > 0 && getFullScore(score)}</p>
+          <p>puntaje actual: {score.length > 0 && getFullScore(score)}</p>
           <p>Tiempo restante por frase:{time}</p>
         </div>
         <div className="flex gap-2 flex-wrap relative p-3 items-center">
@@ -153,14 +150,17 @@ const Home = () => {
             );
           })}
           {phrase.map((word, index) => (
-            <p className={`hidden md:flex md:text-4xl font-serif dark:text-black `} key={index}>
+            <p
+              className={`hidden md:flex md:text-4xl font-serif dark:text-black `}
+              key={index}
+            >
               {word.phrase}
             </p>
           ))}
         </div>
 
         <div className="text-center relative flex md:hidden dark:text-black">
-        <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full "></div>
+          <div className="absolute -z-10 opacity-60 bg-white w-full rounded-md h-full "></div>
           Juego disponible unicamente en tamaños desktop en adelante para jugar
           con teclado
         </div>

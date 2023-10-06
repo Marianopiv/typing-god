@@ -33,7 +33,7 @@ const EnterScore = ({
   return (
     <div className="absolute hidden md:flex bg-white rounded-md p-8 md:w-1/2 items-center flex-col justify-center md:h-96 top-8 md:top-14  shadow-2xl border-black border-2 z-50">
       <h1 className="text-2xl" style={{ fontFamily: "GodOfWar" }}>
-        Anota tu puntuacion para ver si llegaste al salón de la fama.
+        Guarda tu puntuacion para ver si llegaste al salón de la fama.
       </h1>
       <span>Nombre:</span>
       <input
@@ -43,7 +43,7 @@ const EnterScore = ({
         type="text"
         maxLength={20}
       />
-      <span>Score:</span>
+      <span>Puntuacion:</span>
       <input
         disabled
         value={getFullScore(score)}
@@ -61,14 +61,14 @@ const EnterScore = ({
             handleSaveScore({ ...currentUserData, score: getFullScore(score) },highScores)
           }
         >
-          Save Score
+          guardar
         </button>
         <button
           style={{ fontFamily: "GodOfWar" }}
           className="bg-blue-950 text-white"
           onClick={handlePlayAgain}
         >
-          Play Again
+          volver a jugar
         </button>
       </div>
     </div>
