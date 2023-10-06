@@ -33,7 +33,7 @@ const EnterScore = ({
   return (
     <div className="absolute hidden md:flex bg-white rounded-md p-8 md:w-1/2 items-center flex-col justify-center md:h-96 top-8 md:top-14  shadow-2xl border-black border-2 z-50">
       <h1 className="text-2xl" style={{ fontFamily: "GodOfWar" }}>
-        Guarda tu puntuacion para ver si llegaste al salón de la fama.
+        Guarda tu puntuacion para ver si llegaste al salon de la fama.
       </h1>
       <span>Nombre:</span>
       <input
