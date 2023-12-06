@@ -125,7 +125,7 @@ const Home = () => {
       />
       <div className="flex flex-col md:gap-4 items-center justify-center animate__animated animate__fadeIn">
         <h1
-          className="md:text-7xl lg:text-9xl text-red-900"
+          className="md:text-7xl lg:text-8xl text-red-900"
           style={{ fontFamily: "GodOfWar" }}
         >
           Typing God
